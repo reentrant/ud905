@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hello_rectangle/playground.dart';
+
 
 void main() {
   runApp(
@@ -7,7 +9,10 @@ void main() {
       home: Scaffold(
         appBar: AppBar(
           title: const Text("Hello Rectangle"),
-          backgroundColor: Colors.blueGrey,
+          /**
+           * once created, properties cannot change in a stateless widget
+           */
+          backgroundColor: Colors.blueAccent,
         ),
         body: const HelloRectangle(),
       ),
@@ -18,12 +23,11 @@ void main() {
 class HelloRectangle extends StatelessWidget {
   const HelloRectangle({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-        color: Colors.blueAccent,
+        color: Colors.blueGrey,
         height: 400.0,
         width: 300.0,
         child: const Center(
